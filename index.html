@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mon Français — Aprende francés A1–B2</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#">🇫🇷 Mon Français</a>
+    <div class="top-actions">
+      <button id="themeBtn" class="icon-btn" title="Cambiar tema">🌙</button>
+      <button id="exportBtn" class="small-btn">Exportar progreso</button>
+      <label class="small-btn import-btn">
+        Importar progreso
+        <input type="file" id="importInput" accept=".json" hidden>
+      </label>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="welcome">
+      <div>
+        <p class="eyebrow">TU ACADEMIA DE FRANCÉS</p>
+        <h1>Progresa a tu ritmo.</h1>
+        <p>Desde tus primeras palabras hasta expresarte con soltura.</p>
+      </div>
+      <div class="welcome-emoji">🥐</div>
+    </section>
+
+    <section class="stats-grid">
+      <article class="stat-card">
+        <span>⭐</span>
+        <strong id="points">0</strong>
+        <small>Puntos</small>
+      </article>
+      <article class="stat-card">
+        <span>🔥</span>
+        <strong id="streak">0</strong>
+        <small>Días de racha</small>
+      </article>
+      <article class="stat-card">
+        <span>📚</span>
+        <strong id="completedCount">0</strong>
+        <small>Lecciones completadas</small>
+      </article>
+      <article class="stat-card">
+        <span>🧠</span>
+        <strong id="dueCount">0</strong>
+        <small>Tarjetas pendientes</small>
+      </article>
+    </section>
+
+    <section class="level-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">TU CAMINO</p>
+          <h2>Elige tu nivel</h2>
+        </div>
+        <span class="muted" id="levelSummary">Nivel seleccionado: A1</span>
+      </div>
+      <div id="levelGrid" class="level-grid"></div>
+    </section>
+
+    <nav class="tabs">
+      <button class="tab active" data-page="home">🏠 Inicio</button>
+      <button class="tab" data-page="lessons">📖 Gramática</button>
+      <button class="tab" data-page="vocabulary">🗂️ Vocabulario</button>
+      <button class="tab" data-page="cards">🃏 Tarjetas</button>
+      <button class="tab" data-page="ordering">🔤 Ordenar frases</button>
+      <button class="tab" data-page="errors">✍️ Mis errores</button>
+    </nav>
+
+    <section id="homePage" class="page active">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">CONTINÚA APRENDIENDO</p>
+          <h2 id="homeLevelTitle">Nivel A1</h2>
+        </div>
+      </div>
+      <div id="homeContent"></div>
+    </section>
+
+    <section id="lessonsPage" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">APRENDE LAS REGLAS</p>
+          <h2>Gramática y lecciones</h2>
+        </div>
+      </div>
+      <div id="lessonsContent"></div>
+    </section>
+
+    <section id="vocabularyPage" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PALABRAS QUE NECESITAS</p>
+          <h2>Vocabulario</h2>
+        </div>
+      </div>
+      <input id="searchWord" class="search" placeholder="Buscar en francés o español...">
+      <div id="vocabularyContent"></div>
+      <form id="addWordForm" class="add-word-form">
+        <h3>Añadir una palabra</h3>
+        <input id="newFrench" placeholder="Palabra en francés" required>
+        <input id="newSpanish" placeholder="Traducción en español" required>
+        <button class="primary-btn">Añadir a mi vocabulario</button>
+      </form>
+    </section>
+
+    <section id="cardsPage" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">REPASO INTELIGENTE</p>
+          <h2>Tarjetas de memoria</h2>
+        </div>
+      </div>
+      <div id="cardsContent"></div>
+    </section>
+
+    <section id="orderingPage" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">PRACTICA LA ESTRUCTURA</p>
+          <h2>Ordenar frases</h2>
+        </div>
+      </div>
+      <div id="orderingContent"></div>
+    </section>
+
+    <section id="errorsPage" class="page">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">APRENDE DE TUS FALLOS</p>
+          <h2>Mis errores</h2>
+        </div>
+      </div>
+      <div id="errorsContent"></div>
+    </section>
+  </main>
+
+  <footer>Mon Français · Aprende un poco cada día 🇫🇷</footer>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
